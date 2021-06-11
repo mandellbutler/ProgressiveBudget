@@ -3,7 +3,7 @@ const path = require("path");
 
 const config = {
   // Update the entry point
-  entry: "index.js",
+  entry: "./index.js",
   output: {
     // Set the path and filename for the output bundle (hint: You will need to use "__dirname")
     path: __dirname + "/dist",
@@ -13,7 +13,7 @@ const config = {
   plugins: [
     new WebpackPwaManifest({
       fingerprints: false,
-      // inject: false,
+      inject: false,
       name: 'My Progressive Budget',
       short_name: 'MyPB',
       description: 'My awesome Progressive Budget App!',
@@ -22,7 +22,7 @@ const config = {
       start_url: "/",
       icons: [
         {
-          src: path.resolve('public/icons/icon-512x512.png'),
+          src: path.resolve('icons/icon-512x512.png'),
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
           destination: path.join("assets", "icons")
 
@@ -38,12 +38,12 @@ const config = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"]
-          }
+            presets: ["@babel/preset-env"],
+          },
         }
-      }
-    ]
+      },
+    ],
 
-  }
+  },
 }
 module.exports = config;
