@@ -49,7 +49,7 @@ Thanks to the application's intuitive design, with a few simple clicks, the user
 
 
 
-![Add Workout](public/images/entry.gif)
+![Add Transaction](public/images/Entry.gif)
 
 
 
