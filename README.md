@@ -8,7 +8,7 @@
 
 
 # Description
-Progressive Budget is a web application that allows users to perform the much needed task of monitoring their bank account, without interruption. This progressive web app....  
+Progressive Budget is a web application that allows users to perform the much needed task of monitoring their bank account, without interruption. This progressive web application actively caches user data and ensures full app functionality, even in instances when internet connection is unavailable. Users can have peace of mind, knowing their budget is always available and up to date, with the Progessive Budget app.  
 
 
 # Installation
@@ -35,9 +35,9 @@ Progressive Budget is a web application that allows users to perform the much ne
 
 
 # Usage
-This application allows fiscally consciouss users to closely monitor their transactions without interruption. Once the application has been installed and opened, the user is presented with... 
+This application allows fiscally consciouss users to closely monitor their transactions without interruption. Once the application has been installed and opened, the user is presented with a form to input a Transaction Name and Amount. Once the information has been entered, click on the 'Add Funds' or 'Subtract Funds' buttons, and the budget will adjust accordingly.
 
-<!-- <img src="public/images/trackerImg.png" width="400"> -->
+<img src="public/images/home.png" width="400">
 
 Thanks to the application's intuitive design, with a few simple clicks, the user will have the ability to:
 
@@ -47,10 +47,9 @@ Thanks to the application's intuitive design, with a few simple clicks, the user
 
 * View an account balance, whether on or offline
 
-<!-- <img src="public/images/dash.png" width="400"> -->
 
 
-<!-- ![Add Workout](public/images/tracker.gif) -->
+![Add Workout](public/images/entry.gif)
 
 
 
