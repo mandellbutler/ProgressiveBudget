@@ -2,17 +2,11 @@ const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/index.js',
+  '/db.js',
   '/styles.css',
-  '/service-worker.js',
-  '/dist/manifest.json',
-  '/dist/bundle.js',
-  // '/favicon.ico',
-  '/dist/assets/icons/icon_96x96.png',
-  '/dist/assets/icons/icon_128x128.png',
-  '/dist/assets/icons/icon_192x192.png',
-  '/dist/assets/icons/icon_256x256.png',
-  '/dist/assets/icons/icon_384x384.png',
-  '/dist/assets/icons/icon_512x512.png',
+  '/manifest.webmanifest',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
   "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 ];
 
@@ -53,16 +47,16 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   // non GET requests are not cached and requests to other origins are not cached
-  if (
-    event.request.method !== "GET" ||
-    !event.request.url.startsWith(self.location.origin)
-  ) {
-    event.respondWith(fetch(event.request));
-    return;
-  }
+  // if (
+  //   event.request.method !== "GET" ||
+  //   !event.request.url.startsWith(self.location.origin)
+  // ) {
+  //   event.respondWith(fetch(event.request));
+  //   return;
+  // }
 
   // handle runtime GET requests for data from /api routes
-  if (event.request.url.includes("/api")) {
+  if (event.request.url.includes("/api/transaction")) {
     // make network request and fallback to cache if network request fails (offline)
     event.respondWith(
       caches.open(RUNTIME_CACHE).then(cache => {
